@@ -16,6 +16,14 @@ import { ContainerComponent } from './shared/container/container.component';
 import { CardBuscaComponent } from './shared/card-busca/card-busca.component';
 import { MatCardModule } from '@angular/material/card';
 import { DepoimentosComponent } from './shared/depoimentos/depoimentos.component';
+import { FormBuscaComponent } from './shared/form-busca/form-busca.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'
 
 @NgModule({
   declarations: [
@@ -27,7 +35,8 @@ import { DepoimentosComponent } from './shared/depoimentos/depoimentos.component
     HomeComponent,
     ContainerComponent,
     CardBuscaComponent,
-    DepoimentosComponent
+    DepoimentosComponent,
+    FormBuscaComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,14 @@ import { DepoimentosComponent } from './shared/depoimentos/depoimentos.component
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
