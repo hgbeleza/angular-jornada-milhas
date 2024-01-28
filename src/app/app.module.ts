@@ -8,6 +8,7 @@ import { BannerComponent } from './shared/banner/banner.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './shared/card/card.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,7 +29,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
