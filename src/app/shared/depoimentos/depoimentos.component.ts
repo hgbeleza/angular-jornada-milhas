@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DepoimentoService } from 'src/app/core/services/depoimento.service';
+import { Depoimento } from 'src/app/core/types/type';
 
 @Component({
   selector: 'app-depoimentos',
   templateUrl: './depoimentos.component.html',
   styleUrls: ['./depoimentos.component.scss'],
 })
-export class DepoimentosComponent {
-  depoimento: string = `
-    Recomendo fortemente a agência de viagens Jornada.
-    Eles oferecem um serviço personalizado e de alta qualidade
-    que excedeu minhas expectativas em minha última viagem.
-  `;
-  autoria: string = 'Mariana Faustino';
+export class DepoimentosComponent implements OnInit {
+  depoimentos: Depoimento[] = [];
+
+  constructor(private depoimentoService: DepoimentoService) {}
+
+  /**
+   * Bug* o retorno está vindo triplicada!
+   */
+  ngOnInit(): void {
+    this.depoimentoService.listar().subscribe(
+      res => {
+        this.depoimentos = res;
+        console.log(this.depoimentos);
+      }
+    )
+  }
 }
